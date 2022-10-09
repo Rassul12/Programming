@@ -1,0 +1,8 @@
+public class Node{
+int value;
+Node Next;
+public Node(int value,Node Next){
+this.Value=Value;
+this.Next=Next;
+}
+}

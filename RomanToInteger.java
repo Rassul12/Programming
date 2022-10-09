@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.HashMap;
+public class RomanToInteger{
+public static void romanToInteger(String roman_number){
+int sum=0;
+HashMap<Character,Integer>map=new HashMap<Character,Integer>();
+map.put('I',1);
+map.put('V',5);
+map.put('X',10);
+map.put('L',50);
+map.put('C',100);
+map.put('D',500);
+map.put('M',1000);
+boolean flag=true;
+for(int i=0;i<roman_number.length();i++){
+if(roman_number.length()>=1&&roman_number.length()<=15){
+System.out.println("Must to be Number less than or equls to 15 And Greater than or equls to 1");
+break;
+}
+char c=roman_number.charAt(i);
+if(map.get(c)==null){
+flag=false;
+System.out.println("Please input Value Corected");
+break;
+}
+if(i>0&&map.get(c)>map.get(roman_number.charAt(i-1))){
+sum+=map.get(c)-(2*map.get(roman_number.charAt(i-1)));
+}
+else
+sum+=map.get(c);
+
+}
+if(flag){
+if(sum<=3999&&sum>=1)
+System.out.println(sum);
+else
+System.out.println("Please Input Value btween I and MMMCMXCIX");
+}
+}
+public static void main(String[]args){
+Scanner scan=new Scanner(System.in);
+String num_roman=scan.next();
+romanToInteger(num_roman);
+
+}
+}

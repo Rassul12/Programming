@@ -1,0 +1,18 @@
+public class MargeTwoList{
+Node head,tail;
+public MargeTwoList(Node n){
+head=n;
+tail=head;
+}
+public void add(Node newNode){
+tail.next=newNode;
+tail=newNode;
+}
+public void Marage(Node l1,Node l2){
+
+while(l1.){
+
+}
+}
+
+}

@@ -1,0 +1,18 @@
+public class LinkedList{
+Node head,tail;
+public LinkedList(Node n){
+head=n;
+tail=head;
+}
+public void add(Node newNode){
+tail.Next=newNode;
+tail=newNode;
+} 
+public void disPlay(){
+Node n=head;
+while(n!=null){
+System.out.println(n.Value);
+n=n.Next;
+}
+}
+}

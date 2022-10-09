@@ -1,0 +1,28 @@
+public class main{
+int value;
+main next;
+main head,tail;
+public main(int v,main n){
+value=v;
+next=n;
+}
+public main(main n){
+head=n;
+tail=head;
+}
+public void add(main n){
+tail.next=n;
+tail=n;
+}
+public void print(){
+main n=head;
+while(n!=null){
+System.out.println(n.value);
+n=n.next;
+}
+}
+public static void main(String []args){
+
+
+}
+}

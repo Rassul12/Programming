@@ -1,0 +1,33 @@
+import java.util.HashMap;
+public class CommonPrefix {
+    public static String longestCommonPrefix(String[] strs) {
+       String common="";
+HashMap<String,String>map=new HashMap<>();
+for(int i=0;i<strs.length;i++)
+{
+
+ String d=""+strs[i].charAt(0)+strs[i].charAt(1);
+        
+if(map.containsKey(d))
+{
+if(!d.equals(common))
+common+=d;
+
+}
+else
+{
+
+map.put(d,strs[i]);
+}
+
+}
+        return common;
+        
+    }
+
+public static void main(String []args){
+String []str={"flower","flow","flight"};
+String s=longestCommonPrefix(str);
+System.out.println(s);
+}
+}
